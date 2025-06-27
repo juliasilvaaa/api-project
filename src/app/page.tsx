@@ -2,7 +2,7 @@
 import { IUser } from "@/interfaces/users";
 import { getUsers } from "@/services/users";
 import { useEffect, useState } from "react";
-
+import './style.css'
 
 export default function Home() {
 
@@ -69,9 +69,18 @@ export default function Home() {
                 <h1>{user.phone}</h1>
                 <h1 className="text-sm">{user.email}</h1>
 
-                <button className="bg-gray-300 rounded-2xl text-white w-[50%] text-sm">
+                <button
+                id="buttonCard" 
+                className="bg-gray-300 rounded-2xl text-white w-[50%] text-sm">
                   Exibir Perfil
                 </button>
+
+
+                <div id="cardInfo">
+                  <p>oi</p>
+                </div>
+
+                
               </div>
 
             </div>
