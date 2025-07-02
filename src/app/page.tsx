@@ -55,6 +55,7 @@ export default function Home() {
   const [search, setSearch] = useState('')
 
   const userFilter = users.filter((user) =>
+    // Buscando usuarios pelo primeiro nome e convertendo para todas letras minusculas 
     user.firstName.toLowerCase().includes(search.toLowerCase())
   );
 
@@ -83,6 +84,7 @@ export default function Home() {
           </div>
 
           <input
+          // Valor - Search
             value={search}
             // Implementação de evento quando for alterado o valor
             onChange={(ev) => setSearch(ev.target.value)}
@@ -96,6 +98,8 @@ export default function Home() {
 
       <div className="grid grid-cols-2 gap-10">
 
+{/* Estrutura condicional que usa o operador ternário */}
+{/* Se o user filter não tiver nada retorna 'usuarios não encontrados', e se retornar percorre pelo map de users  */}
         {userFilter.length === 0 ? (
           <p>User not found</p>
         ) :
